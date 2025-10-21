@@ -25,4 +25,19 @@ public class Ex1{
         double avg = (double)sum/grades.length;
         return Math.round(avg * 100.0) / 100.0;
     }
+
+    public int[] getRoundedGrades(int[] grades){
+        int[] roundedGrades = new int[grades.length];
+        int index = 0;
+        for(int grade : grades){
+            if (grade >= 38){
+                int nextMultipleOf5 = ((grade / 5) + 1) * 5;
+                if (nextMultipleOf5 - grade < 3) {
+                    grade = nextMultipleOf5;
+                }
+            }
+            roundedGrades[index++] = grade;
+        }
+        return roundedGrades;
+    }
 }
