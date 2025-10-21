@@ -40,4 +40,15 @@ public class Ex1{
         }
         return roundedGrades;
     }
+
+    public int getMaxRoundedGrade(int[] grades){
+        int[] roundedGrades = getRoundedGrades(grades);
+        int max = roundedGrades[0];
+        for (int grade : roundedGrades) {
+            if (grade > max) {
+                max = grade;
+            }
+        }
+        return max;
+    }
 }

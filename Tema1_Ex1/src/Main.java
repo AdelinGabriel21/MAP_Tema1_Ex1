@@ -8,5 +8,6 @@ public class Main {
         System.out.println("Failing grades: " + Arrays.toString(ex1.getFailingGrades(grades)));
         System.out.println("Average grade: " + ex1.getAverageGrade(grades));
         System.out.println("Rounded grades: " + Arrays.toString(ex1.getRoundedGrades(grades)));
+        System.out.println("Max rounded grade: " + ex1.getMaxRoundedGrade(grades));
     }
 }
